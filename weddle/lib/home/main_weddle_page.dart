@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weddle/Utils/colors.dart';
-import 'package:weddle/home/halls_page_body.dart';
+import 'package:weddle/home/hall_page_body.dart';
 import 'package:weddle/widgets/big_text.dart';
 import 'package:weddle/widgets/small_text.dart';
 
@@ -17,6 +17,7 @@ class _MainWeddlePage extends State<MainWeddlePage> {
     return Scaffold(
       body: Column(
         children: [
+          //showing the header
           Container(
               margin: const EdgeInsets.only(top: 45, bottom: 15),
               padding: const EdgeInsets.only(left: 20, right: 20),
@@ -56,6 +57,7 @@ class _MainWeddlePage extends State<MainWeddlePage> {
                   )
                 ],
               )),
+          //showing the body
           const FoodPageBody(),
         ],
       ),
