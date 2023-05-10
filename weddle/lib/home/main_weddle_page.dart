@@ -64,7 +64,10 @@ class _MainWeddlePage extends State<MainWeddlePage> {
                 ],
               )),
           //showing the body
-          const FoodPageBody(),
+          const Expanded(
+              child: SingleChildScrollView(
+            child: FoodPageBody(),
+          ))
         ],
       ),
     );

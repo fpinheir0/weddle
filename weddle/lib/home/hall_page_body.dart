@@ -64,6 +64,59 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                 borderRadius: BorderRadius.circular(5.0)),
           ),
         ),
+        SizedBox(
+          height: Dimensions.height30,
+        ),
+        Container(
+          margin: EdgeInsets.only(left: Dimensions.width30),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              BigText(text: "Popular"),
+              Container(
+                margin: const EdgeInsets.only(bottom: 3),
+                child: BigText(text: "...", color: Colors.black26),
+              ),
+              SizedBox(
+                width: Dimensions.width10,
+              ),
+              Container(
+                margin: const EdgeInsets.only(bottom: 2),
+                child: SmallText(text: "hall page weddle most popular"),
+              )
+            ],
+          ),
+        ),
+        //LIST OF FOODS AND IMAGES
+        Container(
+          height: 900,
+          child: ListView.builder(
+              physics: const AlwaysScrollableScrollPhysics(),
+              shrinkWrap: true,
+              itemCount: 10,
+              itemBuilder: (context, index) {
+                return Container(
+                  margin: EdgeInsets.only(
+                      left: Dimensions.width20, right: Dimensions.width20),
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 120,
+                        height: 120,
+                        decoration: BoxDecoration(
+                          borderRadius:
+                              BorderRadius.circular(Dimensions.radius20),
+                          color: Colors.white38,
+                          //  image: const DecorationImage(
+                          //  image: AssetImage(""),
+                        ),
+                      ),
+                      // ),
+                    ],
+                  ),
+                );
+              }),
+        ),
       ],
     );
   }
@@ -151,7 +204,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    BigText(text: "Digite o titulo aqui"),
+                    BigText(text: "Salão de festas A.V"),
                     SizedBox(height: Dimensions.height10),
                     Row(
                       children: [
